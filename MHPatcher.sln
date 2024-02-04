@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHPatcher", "MHPatcher\MHPatcher.csproj", "{408C3267-951A-40F5-B990-B09317AB6618}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{408C3267-951A-40F5-B990-B09317AB6618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408C3267-951A-40F5-B990-B09317AB6618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408C3267-951A-40F5-B990-B09317AB6618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408C3267-951A-40F5-B990-B09317AB6618}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77AEB6E5-AB55-42D8-B653-3BB43781C4DE}
+	EndGlobalSection
+EndGlobal
