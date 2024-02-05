@@ -30,7 +30,7 @@ namespace MHPatcher
             string hash = Convert.ToHexString(SHA1.HashData(data));
             if (hash != ExeHash)
             {
-                Console.WriteLine($"Invalid executable! Make sure you are trying to patch Win32 executable of version 1.52.0.1700 (Steam).");
+                Console.WriteLine($"Invalid executable! Make sure you are trying to patch the Win32 executable of version 1.52.0.1700 (Steam).");
                 Console.ReadLine();
                 return;
             }
@@ -51,6 +51,8 @@ namespace MHPatcher
 
         static void ApplyPatch(byte[] data, Patch patch)
         {
+            if (patch.IsEnabled == false) return;
+
             Console.WriteLine($"Applying \"{patch.Name}\"...");
             int offset = Convert.ToInt32(patch.Offset, 16);
             byte[] patchData = Convert.FromHexString(patch.Data);
