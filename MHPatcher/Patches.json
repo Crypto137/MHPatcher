@@ -4,5 +4,11 @@
 		"IsEnabled": true,
 		"Offset": "0x015f8a98",
 		"Data": "01"
+	},
+	{
+		"Name": "Force Console UI",
+		"IsEnabled": false,
+		"Offset": "0x0141b8c8",
+		"Data": "07010000"
 	}
 ]
