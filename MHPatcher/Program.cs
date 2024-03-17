@@ -6,9 +6,16 @@ namespace MHPatcher
 {
     internal class Program
     {
+        enum Mode
+        {
+            x32,
+            x64
+        }
+
         static void Main(string[] args)
         {
-            const string ExeHash = "AABFC231A0BA96229BCAC1C931EAEA777B7470EC";
+            const string ExeHash32 = "AABFC231A0BA96229BCAC1C931EAEA777B7470EC";
+            const string ExeHash64 = "6DC9BCDB145F98E5C2D7A1F7E25AEB75507A9D1A";
 
             if (args.Length < 1)
             {
@@ -28,15 +35,22 @@ namespace MHPatcher
 
             byte[] data = File.ReadAllBytes(filePath);
             string hash = Convert.ToHexString(SHA1.HashData(data));
-            if (hash != ExeHash)
+
+            Mode mode;
+            if (hash == ExeHash32)
+                mode = Mode.x32;
+            else if (hash == ExeHash64)
+                mode = Mode.x64;
+            else
             {
-                Console.WriteLine($"Invalid executable! Make sure you are trying to patch the Win32 executable of version 1.52.0.1700 (Steam).");
+                Console.WriteLine($"Invalid executable! Make sure you are trying to patch an executable of version 1.52.0.1700 (Steam).");
                 Console.ReadLine();
                 return;
             }
 
             string root = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            Patch[] patches = JsonSerializer.Deserialize<Patch[]>(File.ReadAllText(Path.Combine(root, "Patches.json")));
+            string patchesFile = mode == Mode.x32 ? "Patches32.json" : "Patches64.json";
+            Patch[] patches = JsonSerializer.Deserialize<Patch[]>(File.ReadAllText(Path.Combine(root, patchesFile)));
 
             foreach (var patch in patches)
                 ApplyPatch(data, patch);

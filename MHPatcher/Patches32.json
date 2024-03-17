@@ -1,0 +1,32 @@
+﻿[
+	{
+		"Name": "Enable Region Generation",
+		"IsEnabled": false,
+		"Offset": "0x015f8a98",
+		"Data": "01"
+	},
+	{
+		"Name": "Force Console UI",
+		"IsEnabled": false,
+		"Offset": "0x0141b8c8",
+		"Data": "07010000"
+	},
+	{
+		"Name": "Disable Force Load from Pak",
+		"IsEnabled": false,
+		"Offset": "0x0141be8a",
+		"Data": "00"
+	},
+	{
+		"Name": "Set Game Database Approval Threshold to NotInGame",
+		"IsEnabled": false,
+		"Offset": "0x00694298",
+		"Data": "01000000"
+	},
+	{
+		"Name": "Enable Verbose Web Helper Logging",
+		"IsEnabled": false,
+		"Offset": "0x0128C645",
+		"Data": "00000000"
+	}
+]
