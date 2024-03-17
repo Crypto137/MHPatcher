@@ -1,3 +1,8 @@
 ﻿[
-	
+	{
+		"Name": "Bypass Session Token Encryption Error by FF_Lowthor",
+		"IsEnabled": false,
+		"Offset": "0x019B317E",
+		"Data": "EB"
+	}
 ]
