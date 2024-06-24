@@ -4,5 +4,11 @@
 		"IsEnabled": false,
 		"Offset": "0x019B317E",
 		"Data": "EB"
+	},
+	{
+		"Name": "Disable Screenshots When Sending Bug Report",
+		"IsEnabled": false,
+		"Offset": "0x018E8F95",
+		"Data": "00"
 	}
 ]
