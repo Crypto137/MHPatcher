@@ -1,5 +1,11 @@
 ﻿[
 	{
+		"Name": "Fix Session Token Encryption by TobiX",
+		"IsEnabled": false,
+		"Offset": "0x005CC5D6",
+		"Data": "C7000802000090909090904189F8"
+	},
+	{
 		"Name": "Bypass Session Token Encryption Error by FF_Lowthor",
 		"IsEnabled": false,
 		"Offset": "0x019B317E",
