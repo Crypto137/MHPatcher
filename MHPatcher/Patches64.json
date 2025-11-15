@@ -28,5 +28,11 @@
 		"IsEnabled": false,
 		"Offset": "0x018F0860",
 		"Data": "38300000"
+	},
+	{
+		"Name": "Set AuthServerPort to 8080",
+		"IsEnabled": false,
+		"Offset": "0x018F0860",
+		"Data": "38303830C64424340049C7C00500000090909090909090909090909090"
 	}
 ]
