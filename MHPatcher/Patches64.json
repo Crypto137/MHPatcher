@@ -16,5 +16,17 @@
 		"IsEnabled": false,
 		"Offset": "0x018E8F95",
 		"Data": "00"
+	},
+	{
+		"Name": "Use port 8080 for GetSiteConfigFromUrl()",
+		"IsEnabled": false,
+		"Offset": "0x018ED01F",
+		"Data": "901F0000"
+	},
+	{
+		"Name": "Set AuthServerPort to 80 (disable HTTPS)",
+		"IsEnabled": false,
+		"Offset": "0x018F0860",
+		"Data": "38300000"
 	}
 ]
