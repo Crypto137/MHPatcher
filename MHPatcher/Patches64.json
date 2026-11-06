@@ -18,21 +18,39 @@
 		"Data": "00"
 	},
 	{
-		"Name": "Use port 8080 for GetSiteConfigFromUrl()",
+		"Name": "Custom ports (header: .text VirtualSize)",
 		"IsEnabled": false,
-		"Offset": "0x018ED01F",
-		"Data": "901F0000"
+		"Offset": "0x000002B0",
+		"Data": "229FDB01"
 	},
 	{
-		"Name": "Set AuthServerPort to 80 (disable HTTPS)",
+		"Name": "Custom ports (SiteConfig request: port from -siteconfigport)",
 		"IsEnabled": false,
-		"Offset": "0x018F0860",
-		"Data": "38300000"
+		"Offset": "0x018ED01B",
+		"Data": "E8F0D14C000F1F"
 	},
 	{
-		"Name": "Set AuthServerPort to 8080",
+		"Name": "Custom ports (AuthServerPort: -authport / SiteConfig instead of forced 443)",
 		"IsEnabled": false,
-		"Offset": "0x018F0860",
-		"Data": "38303830C64424340049C7C00400000090909090909090909090909090"
+		"Offset": "0x018F085C",
+		"Data": "E8E5994C0048899F68010000EB24"
+	},
+	{
+		"Name": "Custom ports (auth request 2: HTTPS unless -authhttp)",
+		"IsEnabled": false,
+		"Offset": "0x019AD4BD",
+		"Data": "E8FACD40000F1F440000"
+	},
+	{
+		"Name": "Custom ports (auth request 1: HTTPS unless -authhttp)",
+		"IsEnabled": false,
+		"Offset": "0x019B0828",
+		"Data": "E88F9A40000F1F4000"
+	},
+	{
+		"Name": "Custom ports (routines in unused .text tail)",
+		"IsEnabled": false,
+		"Offset": "0x01DBA210",
+		"Data": "C744244050000000488D8BE0090000488D15D90000004531C04883EC28E8DED87FFE4883C428E8940000004585C9740544894C2440C3488D8FE0090000488D15C50000004883EC28E8C3D77FFE4883C42884C00F95C0488D0D8E000000486311880411488D8FE0090000488D158E0000004531C04883EC28E883D87FFE4883C4284885C074254889C24983C8FF49FFC042803C020075F6488D8F300100004883EC28E8A9AA7DFE4883C428C351488D0D370000004863010FB60401593401C34531C94885C074230FB61083EA3083FA097718456BC90A4101D14181F9FFFF0000770548FFC0EBE04531C9C315BEF60073697465636F6E666967706F72743D0061757468706F72743D006175746868747470"
 	}
 ]
